@@ -6,6 +6,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser');
 const JWT_SECRET = "HemantakaFirefist"
+
+
 //ROUTE 1 : Create a user using POST "api/auth/createuser". Doesn't require authentication
 router.post('/createuser', [
     body('name', "Enter a valid name").isLength({ min: 3 }),
